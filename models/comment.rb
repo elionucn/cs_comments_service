@@ -94,7 +94,6 @@ class Comment < Content
         .merge!("id" => _id,
                 "user_id" => author_id,
                 "username" => author_username,
-                "profile_name" => author_name,
                 "depth" => depth,
                 "closed" => comment_thread.nil? ? false : comment_thread.closed,
                 "thread_id" => comment_thread_id,

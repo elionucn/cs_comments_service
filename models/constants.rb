@@ -25,7 +25,6 @@ UP_COUNT = "up_count".freeze
 DOWN_COUNT = "down_count".freeze
 POINT = "point".freeze
 USERNAME = "username".freeze
-PROFILE_NAME = "profile_name".freeze
 EXTERNAL_ID = "external_id".freeze
 COMMENT = "comment".freeze
 THREAD = "thread".freeze
