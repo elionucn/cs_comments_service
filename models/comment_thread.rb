@@ -121,6 +121,7 @@ class CommentThread < Content
       .merge!("id" => _id,
               "user_id" => author_id,
               "username" => author_username,
+              "profile_name" => author_name,
               "votes" => votes.slice(COUNT, UP_COUNT, DOWN_COUNT, POINT),
               "abuse_flaggers" => abuse_flaggers,
               "tags" => [],
