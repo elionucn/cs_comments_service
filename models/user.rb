@@ -8,6 +8,7 @@ class User
   field :external_id, type: String
   field :username, type: String
   field :default_sort_key, type: String, default: "date"
+  field :profile_name, type: String
 
   embeds_many :read_states
   has_many :comments, inverse_of: :author
