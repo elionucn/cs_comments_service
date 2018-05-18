@@ -9,6 +9,7 @@ class Content
   field :abuse_flaggers, type: Array, default: []
   field :historical_abuse_flaggers, type: Array, default: [] #preserve abuse flaggers after a moderator unflags
   field :author_username, type: String, default: nil
+  field :author_name, type: String
 
   index({_type: 1, course_id: 1, pinned: -1, created_at: -1}, {background: true})
   index({_type: 1, course_id: 1, pinned: -1, comment_count: -1, created_at: -1}, {background: true})
@@ -102,5 +103,6 @@ class Content
   def set_username
     # avoid having to look this attribute up later, since it does not change
     self.author_username = author.username
+    self.author_name = author.profile_name
   end
 end
